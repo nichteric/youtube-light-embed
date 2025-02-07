@@ -1,0 +1,123 @@
+:root {
+	--ytleH: -10px;
+}
+
+.acf-block-youtube_light_embed {
+	overflow: visible !important;
+	position: relative;
+}
+
+.acf-block-youtube_light_embed .ytle-player {
+	position: relative;
+	z-index: 1;
+	aspect-ratio: 16/9;
+	background-color: transparent;
+}
+
+/* Video poster image */
+.acf-block-youtube_light_embed .ytle-player img {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	display: block;
+	background: white;
+}
+
+/* Play button */
+.acf-block-youtube_light_embed .play {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	aspect-ratio: 16/9;
+	width: 100%;
+	background-size: 60px 60px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtaGlkZGVuPSJ0cnVlIiByb2xlPSJpbWciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxnIGZpbGw9Im5vbmUiPjxnIGNsaXAtcGF0aD0idXJsKCNzdmdJRGEpIj48cGF0aCBmaWxsPSIjZmYwMDAwIiBkPSJNMjMuNSA2LjUwN2EyLjc4NiAyLjc4NiAwIDAgMC0uNzY2LTEuMjdhMy4wNSAzLjA1IDAgMCAwLTEuMzM4LS43NDJDMTkuNTE4IDQgMTEuOTk0IDQgMTEuOTk0IDRhNzYuNjI0IDc2LjYyNCAwIDAgMC05LjM5LjQ3YTMuMTYgMy4xNiAwIDAgMC0xLjMzOC43NmMtLjM3LjM1Ni0uNjM4Ljc5NS0uNzc4IDEuMjc2QTI5LjA5IDI5LjA5IDAgMCAwIDAgMTJjLS4wMTIgMS44NDEuMTUxIDMuNjguNDg4IDUuNDk0Yy4xMzcuNDc5LjQwNC45MTYuNzc1IDEuMjY5Yy4zNzEuMzUzLjgzMy42MDggMS4zNDEuNzQzYzEuOTAzLjQ5NCA5LjM5LjQ5NCA5LjM5LjQ5NGE3Ni44IDc2LjggMCAwIDAgOS40MDItLjQ3YTMuMDUgMy4wNSAwIDAgMCAxLjMzOC0uNzQyYTIuNzggMi43OCAwIDAgMCAuNzY1LTEuMjdBMjguMzggMjguMzggMCAwIDAgMjQgMTIuMDIzYTI2LjU3OSAyNi41NzkgMCAwIDAtLjUtNS41MTdaTTkuNjAyIDE1LjQyNFY4LjU3N2w2LjI2IDMuNDI0bC02LjI2IDMuNDIzWiIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9InN2Z0lEYSI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMGgyNHYyNEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvZz48L3N2Zz4K');
+}
+
+/* Embedded video, once it's loaded */
+.acf-block-youtube_light_embed .ytle-player iframe {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	background: black;
+}
+
+/* Privacy disclaimer */
+/* NOTE: disclaimer can come from YTLE ACF block, or is automatically added for legacy embeds */
+.acf-block-youtube_light_embed .ytle-privacy-disclaimer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: 0.5s;
+	z-index: -1;
+	visibility: hidden;
+	background-color: transparent;
+}
+
+.acf-block-youtube_light_embed .ytle-privacy-disclaimer > div {
+	margin-top: 1em;
+	background-color: var(--ytleBG);
+	color: var(--ytleTXT);
+	font-family: var(--ytleFF, sans-serif);
+	padding: 1em;
+	border-radius: 16px;
+	gap: 1em;
+	display: grid;
+}
+
+.acf-block-youtube_light_embed .ytle-privacy-disclaimer > div > svg {
+	grid-row-start: 1;
+	grid-column-start: 1;
+	grid-row-end: 2;
+	grid-column-end: 2;
+	height: 24px;
+	width: 24px;
+	margin-top: 0.25em;
+}
+
+.acf-block-youtube_light_embed .ytle-privacy-disclaimer > div > div {
+	font-size: min(120%, 3vw);
+	grid-row-start: 1;
+	grid-column-start: 2;
+	grid-row-end: 2;
+	grid-column-end: 3;
+}
+
+.acf-block-youtube_light_embed .ytle-privacy-disclaimer > div > .ytle-buttons {
+	grid-row-start: 2;
+	grid-column-start: 1;
+	grid-row-end: 3;
+	grid-column-end: 3;
+	justify-self: end;
+}
+
+.acf-block-youtube_light_embed .ytle-privacy-disclaimer > div > .ytle-buttons button {
+	padding: 0.3em 0.8em;
+	border-radius: 4px;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.acf-block-youtube_light_embed .ytle-deny {
+	border: solid 1px var(--ytleTXT);
+	background-color: var(--ytleBG);
+	color: var(--ytleTXT);
+}
+
+.acf-block-youtube_light_embed button:hover {
+	background-color: #ccc;
+}
+
+.acf-block-youtube_light_embed .ytle-accept {
+	border: solid 1px var(--ytleTXT);
+	background-color: var(--ytleTXT);
+	color: var(--ytleBG);
+}
+
+/* Force styling of links in disclaimer */
+.acf-block-youtube_light_embed .ytle-privacy-disclaimer a {
+	color: inherit !important;
+	text-decoration: underline;
+}
